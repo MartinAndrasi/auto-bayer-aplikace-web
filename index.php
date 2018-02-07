@@ -10,7 +10,8 @@ define("DATABASE", "autobayerc");    // The database name.
 class Db{
   public $link;
 
-  function __construct($host,$user,$pass,$name){
+  function __construct($host,$user,$pass,$name)
+  {
     $options=array(
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
       PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
@@ -57,5 +58,5 @@ $statement->execute([
     "ip" => $user_ip
  ]);
 
-header('Location:https://play.google.com');
+header('Location:https://play.google.com/store/apps/details?id=cz.leksys.autobayerapp');
 exit;
